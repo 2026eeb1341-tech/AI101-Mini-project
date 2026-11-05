@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 
 # Load dataset
-df = pd.read_csv("phishing.csv")
+df = pd.read_csv("phishing_features.csv")
 
 # Separate features and target
 X = df.drop("label", axis=1)
