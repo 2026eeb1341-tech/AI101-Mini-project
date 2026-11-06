@@ -15,7 +15,7 @@ from plots import plot_confusion_matrix
 # Train the model
 model = LogisticRegression(max_iter=1000)
 
-model.fit(X_test, y_train)  # Error 1
+model.fit(X_train, y_train)
 
 # Make predictions
 y_pred = model.predict(X_test)
@@ -32,4 +32,4 @@ print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
 
 # Display confusion matrix
-plot_confusion_matrix(y_train, y_pred)  # Error 2
+plot_confusion_matrix(y_test, y_pred)
