@@ -12,15 +12,15 @@ from sklearn.metrics import (
 from preprocessing import X_train, X_test, y_train, y_test
 from plots import plot_confusion_matrix
 
-# Train the model
+
 model = LogisticRegression(max_iter=1000)
 
 model.fit(X_train, y_train)
 
-# Make predictions
+
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+
 print("Model Evaluation Results")
 
 print("Accuracy:", accuracy_score(y_test, y_pred))
@@ -31,5 +31,5 @@ print("F1 Score:", f1_score(y_test, y_pred, zero_division=0))
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
 
-# Display confusion matrix
+
 plot_confusion_matrix(y_test, y_pred)
