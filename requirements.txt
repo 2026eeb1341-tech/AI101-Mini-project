@@ -1,0 +1,5 @@
+Modules required:
+-NumPy
+-pandas
+-matplotlib
+-scikit-learn
