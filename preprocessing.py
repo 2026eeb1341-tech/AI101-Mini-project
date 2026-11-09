@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -7,8 +6,6 @@ from sklearn.preprocessing import StandardScaler
 
 df = pd.read_csv("phishing_features.csv")
 df = df.drop_duplicates()
-print("Duplicate URLs:", df["url"].duplicated().sum())
-print("Duplicate rows:", df.duplicated().sum())
 df = df.dropna(subset=["label"])
 
 numerical_columns = [
@@ -37,11 +34,6 @@ X_train, X_test, y_train, y_test = train_test_split(
     random_state=42,
     stratify=y
 )
-print("Train samples:", X_train.shape[0])
-print("Test samples:", X_test.shape[0])
-
-print("Train-Test overlap:",
-      len(X_train.index.intersection(X_test.index)))
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
