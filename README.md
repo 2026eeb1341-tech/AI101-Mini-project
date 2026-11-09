@@ -29,7 +29,6 @@ The dataset contains URL-related features such as URL length, number of dots, HT
 - NumPy
 - Scikit-learn
 - Matplotlib
-- Seaborn
 
 ## 6. Methodology
 
