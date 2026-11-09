@@ -10,7 +10,7 @@ from sklearn.metrics import (
     classification_report
 )
 
-from preprocessing import X_train, X_test, y_train, y_test, feature_columns, scaler
+from preprocessing import X_train, X_test, y_train, y_test, feature_columns, scaler, numerical_columns
 from plots import plot_confusion_matrix
 
 
@@ -163,9 +163,14 @@ url_data = pd.get_dummies(url_data, columns=["tld"], dtype=int)
 
 url_data = url_data.reindex(columns=feature_columns, fill_value=0)
 
-url_data = scaler.transform(url_data)
+scaled_url = url_data.copy()
 
-result = model.predict(url_data)
+scaled_url[numerical_columns] = scaler.transform(
+    url_data[numerical_columns]
+)
+
+result = model.predict(scaled_url)
+
 print(url_data)
 if result[0] == 1:
     print("This URL is Phishing")
