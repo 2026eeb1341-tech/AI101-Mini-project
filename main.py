@@ -10,7 +10,7 @@ from sklearn.metrics import (
     classification_report
 )
 
-from preprocessing import X_train, X_test, y_train, y_test
+from preprocessing import X_train, X_test, y_train, y_test, feature_columns
 from plots import plot_confusion_matrix
 
 
