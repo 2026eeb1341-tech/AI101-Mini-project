@@ -1,5 +1,5 @@
 from sklearn.linear_model import LogisticRegression
-
+import math
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
@@ -33,3 +33,4 @@ print(classification_report(y_test, y_pred))
 
 
 plot_confusion_matrix(y_test, y_pred)
+
