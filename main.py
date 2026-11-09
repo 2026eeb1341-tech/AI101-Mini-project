@@ -138,11 +138,12 @@ for char in url:
         digits_count += 1
 
 entropy = 0
-
 for char in set(url):
     probability = url.count(char) / len(url)
     entropy = entropy - probability * math.log2(probability)
-    url_data = pd.DataFrame([{
+
+    
+url_data = pd.DataFrame([{
     "url_length": url_length,
     "num_dots": num_dots,
     "has_https": has_https,
@@ -165,7 +166,6 @@ url_data = scaler.transform(url_data)
 
 result = model.predict(url_data)
 print(url_data)
-
 if result[0] == 1:
     print("This URL is Phishing")
 else:
