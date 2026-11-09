@@ -78,7 +78,8 @@ The model achieved high evaluation scores on the selected test split.
    `python main.py`
 
 ## 9. Presentation and Demonstration
-- **Presentation:** Project PPT will be included in the repository.
+- **Presentation:**
+-  https://drive.google.com/drive/folders/1QPdOju0TFVyXLP3X9gUx6GRl7hIbEgIg
 - **Video Demonstration:** Project demonstration video link will be provided in the repository.
 
 ## 10. AI Use Disclosure
