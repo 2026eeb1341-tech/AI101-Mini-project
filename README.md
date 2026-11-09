@@ -76,6 +76,7 @@ The model achieved high evaluation scores on the selected test split.
 4. Run the project:
 
    `python main.py`
+   `python analysis.py`
 
 ## 9. Presentation and Demonstration
 - **Presentation:**
