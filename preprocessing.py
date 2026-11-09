@@ -1,10 +1,11 @@
+
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-
 df = pd.read_csv("phishing_features.csv")
+
 df = df.drop_duplicates()
 df = df.dropna(subset=["label"])
 
@@ -15,17 +16,25 @@ numerical_columns = [
     "has_ip",
     "num_subdirs",
     "num_params",
-    "suspicious_words"
+    "suspicious_words",
+    "special_char_count",
+    "digits_count",
+    "entropy"
 ]
+
 for column in numerical_columns:
     df[column] = df[column].fillna(df[column].median())
 
 df["tld"] = df["tld"].fillna(df["tld"].mode()[0])
+
 df = df.drop("url", axis=1)
+
 df = pd.get_dummies(df, columns=["tld"], drop_first=True, dtype=int)
 
 X = df.drop("label", axis=1)
 y = df["label"]
+
+feature_columns = X.columns
 
 X_train, X_test, y_train, y_test = train_test_split(
     X,
@@ -34,7 +43,14 @@ X_train, X_test, y_train, y_test = train_test_split(
     random_state=42,
     stratify=y
 )
+
 scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
-feature_columns = X.columns
+
+# Scale only numerical columns
+X_train[numerical_columns] = scaler.fit_transform(
+    X_train[numerical_columns]
+)
+
+X_test[numerical_columns] = scaler.transform(
+    X_test[numerical_columns]
+)
