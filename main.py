@@ -39,7 +39,7 @@ plot_confusion_matrix(y_test, y_pred)
 
 print("\n--- URL TESTING ---")
 
-url = input("Enter a URL: ")
+url = input("Enter a URL: ").strip().rstrip("/")
 
 url_length = len(url)
 num_dots = url.count(".")
