@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 df = pd.read_csv("phishing_features.csv")
-
+# add the respective path for csv file
 df = df.drop_duplicates()
 df = df.dropna(subset=["label"])
 
