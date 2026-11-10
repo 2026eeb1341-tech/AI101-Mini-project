@@ -64,6 +64,19 @@ The project classifies URLs as phishing (label `1`) or benign (label `0`) using 
 13) If the URL is classified as legitimate, the program displays that the URL appears legitimate.
 14) This makes our project useful for checking URLs interactively.
 
+
+## Main files
+
+| File | Responsibility |
+|---|---|
+| `main.py` | Model training, evaluation, and interactive URL prediction |
+| `preprocessing.py` | Data cleaning, encoding, splitting, and scaling |
+| `analysis.py` | Dataset exploration and visual analysis |
+| `plots.py` | Confusion-matrix visualization |
+| `phishing_features.csv` | Dataset used by the project |
+| `requirements.txt` | Python package dependencies |
+
+
   
 
 
