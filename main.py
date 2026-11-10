@@ -109,5 +109,6 @@ print("\nPrediction:")
 
 if result[0] == 1:
     print("This URL is Phishing")
+    
 else:
     print("This URL is Benign")
