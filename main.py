@@ -14,7 +14,10 @@ from preprocessing import X_train, X_test, y_train, y_test, feature_columns, sca
 from plots import plot_confusion_matrix
 
 
-model = LogisticRegression(max_iter=1000)
+model = LogisticRegression(
+    max_iter=1000,
+    class_weight="balanced"
+)
 
 model.fit(X_train, y_train)
 
