@@ -6,8 +6,9 @@ The project classifies URLs as phishing (label `1`) or benign (label `0`) using 
 ## Processing flow:
 
 ### 1. Dataset (phishing_features.csv):
--The dataset is stored in a CSV file named phishing_features.csv.It contains different features extracted from URLs.
-  #### These features help identify the characteristics of legitimate and phishing websites.
+1) The dataset is stored in a CSV file named phishing_features.csv.
+2) It contains different features extracted from URLs.
+3) These features help identify the characteristics of legitimate and phishing websites.
   #### Each row represents a URL and its corresponding features.
   #### The target column contains the class label.
   #### The label indicates whether the URL is legitimate or phishing.
