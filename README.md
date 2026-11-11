@@ -81,7 +81,8 @@ The model achieved high evaluation scores on the selected test split.
 ## 9. Presentation and Demonstration
 - **Presentation:**
 -  https://drive.google.com/drive/folders/1QPdOju0TFVyXLP3X9gUx6GRl7hIbEgIg
-- **Video Demonstration:** Project demonstration video link will be provided in the repository.
+- **Video Demonstration:**
+- https://drive.google.com/file/d/1FL3P15qomTeL-9Is_qArQB7Q4DmDf854/view?usp=drivesdk
 
 ## 10. AI Use Disclosure
 Any AI assistance used during the development and documentation of this project will be disclosed according to the course requirements.
